@@ -1,4 +1,5 @@
 import Header from "../components/Header";
+import Footer from "../components/Footer/footer";
 
 export default function Home() {
   return (
@@ -402,6 +403,9 @@ export default function Home() {
         وابسته به متن می‌باشد آنها با استفاده از محتویات ساختگی، صفحه گرافیکی
         خود را صفحه‌آرایی می‌کنند تا مرحله طراحی و صفحه‌بندی را به پایان برند.
       </h5>
+      <div>
+        <Footer />
+      </div>
     </div>
   );
 }

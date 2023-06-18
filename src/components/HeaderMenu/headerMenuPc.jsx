@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 import Search from "./search";
 
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
-
+//input list
 const menuList = ["کنتاکتورها", "اینورترها", "استابلایزرها", "متفرقه"];
 
 export default function HeaderMenuPc() {
@@ -55,7 +55,7 @@ export default function HeaderMenuPc() {
 
   return (
     <Grid container style={GridStyle}>
-      <Grid item style={GridItemStyle}>
+      <Grid id="headerlist" item style={GridItemStyle}>
         <List style={ListStyle}>
           {menuList.map((text, index) => (
             <ListItem key={text} disablePadding>
@@ -67,10 +67,10 @@ export default function HeaderMenuPc() {
           ))}
         </List>
       </Grid>
-      <Grid item style={GridItemStyle}>
+      <Grid id="search" item style={GridItemStyle}>
         <Search />
       </Grid>
-      <Grid item style={GridItemStyle}>
+      <Grid id="icon" item style={GridItemStyle}>
         <InboxIcon />
       </Grid>
     </Grid>
