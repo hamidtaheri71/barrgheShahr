@@ -1,8 +1,5 @@
 import * as React from "react";
-import ListItemText from "@mui/material/ListItemText";
-import { Grid, List } from "@mui/material";
-
-const menuList = ["تماس با ما", "ارتباط با ما", "درباره ما", "ساعت کاری"];
+import { Grid, Link, List } from "@mui/material";
 
 //Style
 const GridStyle = {
@@ -23,6 +20,9 @@ const ListStyle = {
 
 const ListItemStyle = {
   paddingX: "10",
+  color: "white",
+  fontSize: { md: "18px", xs: "13px" },
+  textDecoration: "none",
 };
 
 //Function
@@ -30,9 +30,18 @@ export default function HeaderMenuDown() {
   return (
     <Grid sx={GridStyle}>
       <List sx={ListStyle}>
-        {menuList.map((text, index) => (
-          <ListItemText primary={text} sx={ListItemStyle} />
-        ))}
+        <Link href="http://localhost:3000/contact" sx={ListItemStyle}>
+          تماس با ما
+        </Link>
+        <Link href="http://localhost:3000/about" sx={ListItemStyle}>
+          ارتباط با ما
+        </Link>
+        <Link href="http://localhost:3000/call" sx={ListItemStyle}>
+          شماره تماسها
+        </Link>
+        <Link href="http://localhost:3000/work" sx={ListItemStyle}>
+          ساعات کاری ما
+        </Link>
       </List>
     </Grid>
   );
