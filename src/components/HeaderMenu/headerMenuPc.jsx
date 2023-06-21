@@ -1,7 +1,6 @@
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import { Grid, ListItem, List } from "@mui/material";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
 import { useState, useEffect } from "react";
 import Search from "./search";
 
@@ -71,7 +70,11 @@ export default function HeaderMenuPc() {
         <Search />
       </Grid>
       <Grid id="icon" item style={GridItemStyle}>
-        <InboxIcon />
+        <img
+          style={{ width: 40, height: 40 }}
+          alt=""
+          src={require("../../images/logo.jpg")}
+        />
       </Grid>
     </Grid>
   );

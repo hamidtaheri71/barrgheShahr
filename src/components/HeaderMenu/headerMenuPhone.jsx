@@ -6,7 +6,6 @@ import Divider from "@mui/material/Divider";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
 import { Grid } from "@mui/material";
 import { useState, useEffect } from "react";
 import CloseIcon from "@mui/icons-material/Close";
@@ -18,13 +17,15 @@ export default function HeaderMenuPhone() {
   //LiveStyle
   const [navColor, setnavColor] = useState("white");
   const [navBackgroundcolor, setnavBackgroundcolor] = useState("transparent");
-  const [navPaddMobile, setnavPaddMobile] = useState("30px");
+  const [navHeight, setnavHeight] = useState("5rem");
+  // const [navPaddMobile, setnavPaddMobile] = useState("30px");
   const listenScrollEvent = () => {
     window.scrollY > 10
       ? setnavBackgroundcolor("white")
       : setnavBackgroundcolor("transparent");
     window.scrollY > 10 ? setnavColor("black") : setnavColor("white");
-    window.scrollY > 10 ? setnavPaddMobile("50px") : setnavPaddMobile("30px");
+    window.scrollY > 10 ? setnavHeight("4rem") : setnavHeight("5rem");
+    // window.scrollY > 10 ? setnavPaddMobile("30px") : setnavPaddMobile("10px");
   };
 
   useEffect(() => {
@@ -60,7 +61,11 @@ export default function HeaderMenuPhone() {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <Grid sx={MenuStyle}>
-        <InboxIcon />
+        <img
+          style={{ width: 35, height: 35 }}
+          alt=""
+          src={require("../../images/logo.jpg")}
+        />
         <CloseIcon />
       </Grid>
       <Divider />
@@ -99,12 +104,12 @@ export default function HeaderMenuPhone() {
   const GridStyle = {
     backgroundColor: navBackgroundcolor,
     transition: "all 1s",
-    justifyContent: "space-between",
+    justifyContent: "space-evenly",
     display: "flex",
     flexDirection: "row",
-    height: "4rem",
-    paddingLeft: navPaddMobile,
-    paddingRight: navPaddMobile,
+    height: navHeight,
+    // paddingLeft: navPaddMobile,
+    // paddingRight: navPaddMobile,
   };
 
   return (
@@ -133,7 +138,11 @@ export default function HeaderMenuPhone() {
         <Search />
       </Grid>
       <Grid item sx={GridItemStyle}>
-        <InboxIcon />
+        <img
+          style={{ width: 35, height: 35 }}
+          alt=""
+          src={require("../../images/logo.jpg")}
+        />
       </Grid>
     </Grid>
   );

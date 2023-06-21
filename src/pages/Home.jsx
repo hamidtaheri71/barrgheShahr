@@ -1,7 +1,13 @@
+import Card from "../components/CustomCard";
 export default function Home() {
   return (
     <>
       <h1>This Is Home</h1>
+      <Card
+        title="sssssssss"
+        description="ddddd"
+        image={require("../images/contactor1.jpg")}
+      />
       <h5>
         لورم ایپسوم یا طرح‌نما (به انگلیسی: Lorem ipsum) به متنی آزمایشی و
         بی‌معنی در صنعت چاپ، صفحه‌آرایی و طراحی گرافیک گفته می‌شود. طراح گرافیک
