@@ -71,7 +71,7 @@ export default function HeaderMenuPhone() {
       <Divider />
       <Grid sx={{ textAlignLast: "end" }}>
         {menuList.map((text, index) => (
-          <ListItem key={text} disablePadding>
+          <ListItem key={index} disablePadding>
             <ListItemButton>
               <ListItemText primary={text} />
             </ListItemButton>
@@ -108,20 +108,18 @@ export default function HeaderMenuPhone() {
     display: "flex",
     flexDirection: "row",
     height: navHeight,
-    // paddingLeft: navPaddMobile,
-    // paddingRight: navPaddMobile,
   };
 
   return (
     <Grid container sx={GridStyle}>
       <Grid item sx={GridItemStyle}>
-        {["منو"].map((anchor) => (
+        {["top"].map((anchor) => (
           <React.Fragment key={anchor}>
             <Button
               sx={{ color: navColor, fontSize: "20px" }}
               onClick={toggleDrawer(anchor, true)}
             >
-              {anchor}
+              منو
             </Button>
             <SwipeableDrawer
               anchor={anchor}

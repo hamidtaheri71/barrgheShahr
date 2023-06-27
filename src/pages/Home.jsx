@@ -1,13 +1,58 @@
-import Card from "../components/CustomCard";
+import CustomCard from "../components/CustomCard";
 export default function Home() {
   return (
     <>
       <h1>This Is Home</h1>
-      <Card
-        title="sssssssss"
-        description="ddddd"
-        image={require("../images/contactor1.jpg")}
-      />
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "space-evenly",
+          margin: "20",
+        }}
+        id="test cardss"
+      >
+        <CustomCard
+          title="سلام من حمیدم"
+          description="من میخام راجع به حمید حرف بزنم"
+          imageSrc={require("../images/contactor1.jpg")}
+        />
+        <CustomCard
+          title="sssssssss"
+          description="ddddd"
+          imageSrc={require("../images/logo.jpg")}
+        />
+        <CustomCard
+          title="sssssssss"
+          description="ddddd"
+          imageSrc={require("../images/contactor2.jpg")}
+        />
+      </div>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "space-evenly",
+          margin: "20",
+        }}
+        id="test cardss"
+      >
+        <CustomCard
+          title="sssssssss"
+          description="ddddd"
+          imageSrc={require("../images/contactor1.jpg")}
+        />
+        <CustomCard
+          title="sssssssss"
+          description="ddddd"
+          imageSrc={require("../images/logo.jpg")}
+        />
+        <CustomCard
+          title="sssssssss"
+          description="ddddd"
+          imageSrc={require("../images/contactor2.jpg")}
+        />
+      </div>
       <h5>
         لورم ایپسوم یا طرح‌نما (به انگلیسی: Lorem ipsum) به متنی آزمایشی و
         بی‌معنی در صنعت چاپ، صفحه‌آرایی و طراحی گرافیک گفته می‌شود. طراح گرافیک

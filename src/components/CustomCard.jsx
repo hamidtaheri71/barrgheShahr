@@ -1,51 +1,30 @@
-// import React from "react";
-// import {
-//   Card,
-//   CardContent,
-//   CardMedia,
-//   Grid,
-//   Typography,
-// } from "@material-ui/core";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Typography from "@mui/material/Typography";
+import { CardActionArea } from "@mui/material";
 
-// const CustomCard = ({ title, description, imageSrc }) => {
-//   return (
-//     <Card style={{ height: 300, width: 250 }}>
-//       <Grid style={{ display: "flex" }}>
-//         <CardMedia component="img" alt={title} image={imageSrc} />
-//       </Grid>
-
-//       <CardContent>
-//         <Typography variant="h5" component="h2">
-//           {title}
-//         </Typography>
-//         <Typography variant="body2" color="textSecondary">
-//           {description}
-//         </Typography>
-//       </CardContent>
-//     </Card>
-//   );
-// };
-
-// export default CustomCard;
-
-const Card = ({ image, title, description }) => {
-  const cardStyle = {
-    width: "300px", // عرض موردنظر برای کارت
-    height: "300px", // ارتفاع به اندازه محتوای داخل کارت
-  };
-
-  const imageStyle = {
-    width: "100%",
-    height: "100%",
-  };
-
+export default function Customcard({ title, description, imageSrc }) {
   return (
-    <div className="card" style={cardStyle}>
-      <img src={image} alt="Card" style={imageStyle} />
-      <h2>{title}</h2>
-      <p>{description}</p>
-    </div>
+    <Card style={{ zIndex: "-1" }}>
+      <CardActionArea style={{ width: "200", height: "300" }}>
+        <CardMedia
+          style={{ objectFit: "contain" }}
+          component="img"
+          height="200"
+          width="200"
+          image={imageSrc}
+          alt=""
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="div">
+            {title}
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+            {description}
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+    </Card>
   );
-};
-
-export default Card;
+}

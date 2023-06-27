@@ -57,7 +57,7 @@ export default function HeaderMenuPc() {
       <Grid id="headerlist" item style={GridItemStyle}>
         <List style={ListStyle}>
           {menuList.map((text, index) => (
-            <ListItem key={text} disablePadding>
+            <ListItem key={index} disablePadding>
               <ListItemButton>
                 <ChevronLeftIcon />
                 <ListItemText primary={text} />
