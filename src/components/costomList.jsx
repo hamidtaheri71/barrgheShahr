@@ -16,8 +16,8 @@ export default function CustomList(headline, items) {
     borderBottom: "solid",
   };
 
-  const listItems = items.map((number) => (
-    <Grid key={items.toString()}>{number}</Grid>
+  const listItems = items.map((number, index) => (
+    <Grid key={index}>{number}</Grid>
   ));
   return (
     <Grid container>

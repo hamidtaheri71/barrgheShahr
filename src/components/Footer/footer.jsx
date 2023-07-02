@@ -1,8 +1,8 @@
 import Grid from "@mui/material/Grid";
 import CustomList from "../costomList";
 
-// const hamidArr = ["s", "sa", "sal", "sala", "salam"];
-// const mojArr = ["H", "He", "Hel", "Hell", "Hello"];
+const hamidArr = ["مصی", "ابی", "اسی", "سارا"];
+const mojArr = ["عرفان", "سجاد", "رضا", "سعید", "احمد"];
 const testArr = [
   "کنتاکتورها",
   "اینورترها",
@@ -24,8 +24,8 @@ export default function Footer() {
   return (
     <Grid id={"test"} container style={FooterStyle}>
       <Grid>{CustomList("محصولات ما", testArr)}</Grid>
-      <Grid>{CustomList("محصولات ما", testArr)}</Grid>
-      <Grid>{CustomList("محصولات ما", testArr)}</Grid>
+      <Grid>{CustomList("درباره ما", mojArr)}</Grid>
+      <Grid>{CustomList("ارتباط با ما", hamidArr)}</Grid>
     </Grid>
   );
 }
