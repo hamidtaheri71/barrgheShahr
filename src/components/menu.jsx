@@ -4,7 +4,7 @@ import { Grid, Link, List } from "@mui/material";
 //Style
 const GridStyle = {
   backgroundColor: "#333",
-  width: "80%",
+  width: "91%",
   display: "flex",
   justifyContent: "center",
   height: "50px",
@@ -30,6 +30,9 @@ export default function HeaderMenuDown() {
   return (
     <Grid sx={GridStyle}>
       <List sx={ListStyle}>
+        <Link href="http://localhost:3000" sx={ListItemStyle}>
+          خانه
+        </Link>
         <Link href="http://localhost:3000/contact" sx={ListItemStyle}>
           تماس با ما
         </Link>

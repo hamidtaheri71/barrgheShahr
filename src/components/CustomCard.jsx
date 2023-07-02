@@ -6,7 +6,7 @@ import { CardActionArea } from "@mui/material";
 
 export default function Customcard({ title, description, imageSrc }) {
   return (
-    <Card style={{ zIndex: "-1" }}>
+    <Card style={{ margin: "30px" }}>
       <CardActionArea style={{ width: "200", height: "300" }}>
         <CardMedia
           style={{ objectFit: "contain" }}

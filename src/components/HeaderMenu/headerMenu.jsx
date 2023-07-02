@@ -14,6 +14,7 @@ export default function HeaderMenu() {
         transition: "all 1s",
         position: "fixed",
         top: "0",
+        zIndex: "1",
       }}
     >
       <Grid item sx={{ display: { md: "block", xs: "none" } }}>

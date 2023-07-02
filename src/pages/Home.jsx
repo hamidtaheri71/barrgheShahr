@@ -1,14 +1,26 @@
 import CustomCard from "../components/CustomCard";
 export default function Home() {
+  const desktopStyle = {
+    backgroundColor: "ButtonFace",
+    paddingBlock: "20px",
+    paddingInline: "130px",
+  };
+
+  const mobileStyle = {
+    backgroundColor: "ButtonFace",
+    paddingBlock: "20px",
+    paddingInline: "30px",
+  };
   return (
-    <>
-      <h1>This Is Home</h1>
+    <div style={window.innerWidth > 600 ? desktopStyle : mobileStyle}>
+      <h1>این صفحه خانه است</h1>
       <div
         style={{
           display: "flex",
           flexDirection: "row",
           justifyContent: "space-evenly",
           margin: "20",
+          flexWrap: "wrap",
         }}
         id="test cardss"
       >
@@ -27,25 +39,20 @@ export default function Home() {
           description="ddddd"
           imageSrc={require("../images/contactor2.jpg")}
         />
-      </div>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "space-evenly",
-          margin: "20",
-        }}
-        id="test cardss"
-      >
         <CustomCard
           title="sssssssss"
           description="ddddd"
-          imageSrc={require("../images/contactor1.jpg")}
+          imageSrc={require("../images/contactor2.jpg")}
         />
         <CustomCard
           title="sssssssss"
           description="ddddd"
-          imageSrc={require("../images/logo.jpg")}
+          imageSrc={require("../images/contactor2.jpg")}
+        />
+        <CustomCard
+          title="sssssssss"
+          description="ddddd"
+          imageSrc={require("../images/contactor2.jpg")}
         />
         <CustomCard
           title="sssssssss"
@@ -53,6 +60,7 @@ export default function Home() {
           imageSrc={require("../images/contactor2.jpg")}
         />
       </div>
+
       <h5>
         لورم ایپسوم یا طرح‌نما (به انگلیسی: Lorem ipsum) به متنی آزمایشی و
         بی‌معنی در صنعت چاپ، صفحه‌آرایی و طراحی گرافیک گفته می‌شود. طراح گرافیک
@@ -69,6 +77,6 @@ export default function Home() {
         صفحه‌بندی را به پایان برند.لورم ایپسوم یا طرح‌نما (به انگلیسی: Lorem
         ipsum) به متنی آزمایشی و بی‌معنی در صنعت چاپ، صفحه‌آرایی و طراحی گرافیکز
       </h5>
-    </>
+    </div>
   );
 }

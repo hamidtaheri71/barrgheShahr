@@ -16,9 +16,9 @@ export default function Footer() {
   const FooterStyle = {
     opacity: ".91",
     backgroundColor: "301E67",
-    height: "40vh",
-    paddingTop: "20px",
-    justifyContent: "space-around",
+    height: "auto",
+    paddingBlock: "20px",
+    justifyContent: "space-evenly",
   };
 
   return (
